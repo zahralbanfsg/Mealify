@@ -1,0 +1,360 @@
+@media screen and (max-width: 768px) {
+  /* ################################ NAVBAR SECTION ONE START ################################  */
+  .container .seactions .centernav {
+    display: none;
+  }
+  /* ################################ NAVBAR SECTION ONE END ################################  */
+
+  /* ################################ HOME SECTION TWO START ################################  */
+  header .home-container {
+    flex-direction: column-reverse;
+  }
+  header .home-container .home-content h2 {
+    font-size: 3.5rem;
+  }
+  header .home-container .home-content {
+    width: 100%;
+    text-align: center;
+  }
+  header .home-container .home-Picture {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  header .home-content .home-buttons {
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+  }
+  header .home-content .home-buttons .first-btn {
+    margin-bottom: 15px;
+    margin-right: 0px;
+  }
+  header .home-buttons .seconed-btn {
+    width: 100%;
+  }
+  header .home-buttons .seconed-btn a {
+    width: 100%;
+  }
+  /* ################################ HOME SECTION TWO END ################################  */
+
+  /* ################################ CHEFS SECTION THREE START ################################  */
+  .chefs-sections .chefs-cards .card {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .chefs-sections .main-title p {
+    font-size: 2.9rem;
+  }
+  .chefs .chefs-cards .card .card-content .chef-info {
+    min-height: 80px;
+  }
+  /* ################################ CHEFS SECTION THREE END ################################  */
+
+  /* ################################ Gallery SECTION FOUR START ################################  */
+  section .gallery .pictures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(27, 15vw);
+    gap: 15px;
+  }
+  section .gallery .pictures .meal1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  section .gallery .pictures .meal2 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 10;
+  }
+  section .gallery .pictures .meal3 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end: 13;
+  }
+  section .gallery .pictures .meal5 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 13;
+    grid-row-end: 20;
+  }
+  section .gallery .pictures .meal4 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 17;
+    grid-row-end: 20;
+  }
+  section .gallery .pictures .meal6 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 20;
+    grid-row-end: 24;
+  }
+  section .gallery .pictures .meal7 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 24;
+    grid-row-end: 28;
+  }
+  /* ################################ Gallery SECTION FOUR END ################################  */
+
+  /* ################################ Contact SECTION FIVE START ################################  */
+
+  section .contact-section .main-title p {
+    font-size: 2.9rem;
+  }
+
+  section .contact-section .details .item {
+    width: 100%;
+  }
+  section .contact-section .contact-Form form .name_email input {
+    width: 100%;
+  }
+
+  /* ################################ Contact SECTION FIVE END ################################  */
+  /* ################################ FOOTER SECTION SIX START ################################  */
+  section .footer {
+    width: 80%;
+    margin: auto;
+  }
+  section .footer .Part_One {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  section .footer .Part_Two {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  section .footer .Part_Three {
+    width: 100%;
+  }
+  section .footer .Part_Two form input {
+    width: 100%;
+  }
+  section .footer .Part_Two form button {
+    width: 100%;
+  }
+  /* ################################ FOOTER SECTION SIX END ################################  */
+}
+
+@media screen and (min-width: 768.000000001px) and (max-width: 992px) {
+  /* ################################ NAVBAR SECTION ONE START ################################  */
+
+  .container .seactions .centernav {
+    display: none;
+  }
+  /* ################################ NAVBAR SECTION ONE END ################################  */
+
+  /* ################################ HOME SECTION TWO START ################################  */
+  header .home-container {
+    flex-direction: column-reverse;
+  }
+  header .home-container .home-content {
+    width: 100%;
+    text-align: center;
+  }
+  header .home-container .home-Picture {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  header .home-content .home-buttons {
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+  }
+  header .home-content .home-buttons .first-btn {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  /* ################################ HOME SECTION TWO END ################################  */
+
+  /* ################################ CHEFS SECTION THREE START ################################  */
+
+  .chefs-sections .chefs-cards .card {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .chefs .chefs-cards .card .card-content .chef-info {
+    min-height: 80px;
+  }
+  /* ################################ CHEFS SECTION THREE END ################################  */
+
+  /* ################################ Gallery SECTION FOUR START ################################  */
+
+  section .gallery .pictures {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(22, 5vw);
+    gap: 15px;
+  }
+  section .gallery .pictures .meal1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  section .gallery .pictures .meal2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 11;
+  }
+  section .gallery .pictures .meal3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 9;
+  }
+  section .gallery .pictures .meal5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 18;
+  }
+  section .gallery .pictures .meal4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 15;
+  }
+  section .gallery .pictures .meal6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 15;
+    grid-row-end: 20;
+  }
+  section .gallery .pictures .meal7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 18;
+    grid-row-end: 23;
+  }
+  /* ################################ Gallery SECTION FOUR END ################################  */
+
+  /* ################################ Contact SECTION FIVE START ################################  */
+
+  section .contact-section .details .item {
+    width: 100%;
+  }
+  section .contact-section .contactForm form .name_email input {
+    width: 100%;
+  }
+  /* ################################ Contact SECTION FIVE END ################################  */
+  /* ################################ FOOTER SECTION SIX START ################################  */
+  section .footer {
+    width: 80%;
+    margin: auto;
+  }
+  section .footer .Part_One {
+    width: 49%;
+    margin-bottom: 2rem;
+    order: 1;
+  }
+  section .footer .Part_Two {
+    width: 100%;
+    order: 2;
+  }
+  section .footer .Part_Three {
+    width: 49%;
+    order: 1;
+  }
+  section .footer .Part_Two form input {
+    width: 69%;
+  }
+  section .footer .Part_Two form button {
+    width: 30%;
+  }
+  /* ################################ FOOTER SECTION SIX END ################################  */
+}
+
+@media screen and (min-width: 992.000000001px) and (max-width: 1200px) {
+  /* ################################ NAVBAR SECTION ONE START ################################  */
+
+  .container .seactions .centernav {
+    display: none;
+  }
+  /* ################################ NAVBAR SECTION ONE END ################################  */
+
+  /* ################################ HOME SECTION TWO START ################################  */
+
+  header .home-container .home-content {
+    width: 50%;
+  }
+  header .home-container .home-Picture {
+    width: 50%;
+  }
+  header .home-content .home-buttons {
+    width: 100%;
+  }
+  header .home-content .home-buttons .first-btn {
+    margin-right: 0px;
+  }
+  header .home-buttons .seconed-btn a {
+    width: 100%;
+  }
+  /* ################################ HOME SECTION TWO END ################################  */
+
+  /* ################################ CHEFS SECTION TWO START ################################  */
+
+  .chefs-sections .chefs-cards .card {
+    width: 30%;
+  }
+  .chefs .chefs-cards .card .card-content .chef-info {
+    min-height: 80px;
+  }
+  /* ################################ CHEFS SECTION TWO END ################################  */
+  /* ################################ Gallery SECTION FOUR START ################################  */
+
+  /* ################################ Gallery SECTION FOUR END ################################  */
+  /* ################################ Contact SECTION FIVE START ################################  */
+
+  section .contact-section .details .item {
+    width: 47%;
+  }
+  /* ################################ Contact SECTION FIVE END ################################  */
+  /* ################################ FOOTER SECTION SIX START ################################  */
+  section .footer {
+    width: 100%;
+  }
+  section .footer .Part_One {
+    width: 49%;
+    margin-bottom: 2rem;
+    order: 1;
+  }
+  section .footer .Part_Two {
+    width: 100%;
+    order: 2;
+  }
+  section .footer .Part_Three {
+    width: 49%;
+    order: 1;
+  }
+  section .footer .Part_Two form input {
+    width: 90%;
+  }
+  section .footer .Part_Two form button {
+    width: 30%;
+  }
+  section .footer .Part_Two form input {
+    width: 69%;
+  }
+  section .footer .Part_Two form button {
+    width: 20%;
+  }
+  /* ################################ FOOTER SECTION SIX END ################################  */
+}
+
+@media screen and (min-width: 1200.0001px) {
+  /* ################################ NAVBAR SECTION ONE START ################################  */
+  .container .seactions ul .x-icon {
+    display: none;
+  }
+  .container .dark-mode .side-bar {
+    display: none;
+  }
+
+  /* ################################ NAVBAR SECTION ONE END ################################  */
+}
