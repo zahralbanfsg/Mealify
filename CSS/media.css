@@ -354,6 +354,9 @@
   header {
     min-height: 100vh;
   }
+  .home-content .home-buttons {
+    width: 100%;
+  }
   /* ################################ HOME SECTION TWO END ################################  */
   /* ################################ FOOTER SECTION SIX START ################################  */
   section .footer {
