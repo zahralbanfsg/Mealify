@@ -1,10 +1,4 @@
 @media screen and (max-width: 768px) {
-  /* ################################ NAVBAR SECTION ONE START ################################  */
-  .container .seactions .centernav {
-    display: none;
-  }
-  /* ################################ NAVBAR SECTION ONE END ################################  */
-
   /* ################################ HOME SECTION TWO START ################################  */
   header .home-container {
     flex-direction: column-reverse;
@@ -141,13 +135,6 @@
 }
 
 @media screen and (min-width: 768.000000001px) and (max-width: 992px) {
-  /* ################################ NAVBAR SECTION ONE START ################################  */
-
-  .container .seactions .centernav {
-    display: none;
-  }
-  /* ################################ NAVBAR SECTION ONE END ################################  */
-
   /* ################################ HOME SECTION TWO START ################################  */
   header .home-container {
     flex-direction: column-reverse;
@@ -261,23 +248,10 @@
     width: 49%;
     order: 1;
   }
-  section .footer .Part_Two form input {
-    width: 69%;
-  }
-  section .footer .Part_Two form button {
-    width: 30%;
-  }
   /* ################################ FOOTER SECTION SIX END ################################  */
 }
 
 @media screen and (min-width: 992.000000001px) and (max-width: 1200px) {
-  /* ################################ NAVBAR SECTION ONE START ################################  */
-
-  .container .seactions .centernav {
-    display: none;
-  }
-  /* ################################ NAVBAR SECTION ONE END ################################  */
-
   /* ################################ HOME SECTION TWO START ################################  */
 
   header .home-container .home-content {
@@ -306,9 +280,6 @@
     min-height: 80px;
   }
   /* ################################ CHEFS SECTION TWO END ################################  */
-  /* ################################ Gallery SECTION FOUR START ################################  */
-
-  /* ################################ Gallery SECTION FOUR END ################################  */
   /* ################################ Contact SECTION FIVE START ################################  */
 
   section .contact-section .details .item {
@@ -317,7 +288,8 @@
   /* ################################ Contact SECTION FIVE END ################################  */
   /* ################################ FOOTER SECTION SIX START ################################  */
   section .footer {
-    width: 100%;
+    width: 80%;
+    margin: auto;
   }
   section .footer .Part_One {
     width: 49%;
@@ -332,29 +304,60 @@
     width: 49%;
     order: 1;
   }
-  section .footer .Part_Two form input {
-    width: 90%;
-  }
-  section .footer .Part_Two form button {
-    width: 30%;
-  }
-  section .footer .Part_Two form input {
-    width: 69%;
-  }
-  section .footer .Part_Two form button {
-    width: 20%;
-  }
   /* ################################ FOOTER SECTION SIX END ################################  */
 }
-
-@media screen and (min-width: 1200.0001px) {
+@media screen and (max-width: 1200px) {
   /* ################################ NAVBAR SECTION ONE START ################################  */
-  .container .seactions ul .x-icon {
-    display: none;
+  nav .menu-icon {
+    display: block;
   }
-  .container .dark-mode .side-bar {
+  nav .container .nav-links {
     display: none;
+    position: absolute;
+    background-color: var(--background);
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    top: 0px;
+    right: 0;
+    height: 100%;
+    padding: 25px 10px;
+    transform: translateX(100%);
+    transition: all 0.5s;
   }
-
+  nav .container .nav-links li {
+    padding: 10px 0;
+  }
+  body:has(.nav-links:target) nav {
+    height: 100vh;
+    background-color: var(--bachground-side-bar);
+  }
+  body:has(.nav-links:target) .nav-links {
+    transform: translateX(0);
+    display: block;
+  }
+  nav ul li.close-icon {
+    display: block;
+    text-align: right;
+  }
+  body:has(.home:target) .nav-links a {
+    visibility: hidden;
+  }
+  nav div.mode-group {
+    margin-left: auto;
+    margin-right: 20px;
+  }
   /* ################################ NAVBAR SECTION ONE END ################################  */
+}
+@media screen and (min-width: 1200px) {
+  /* ################################ HOME SECTION TWO START ################################  */
+  header {
+    min-height: 100vh;
+  }
+  /* ################################ HOME SECTION TWO END ################################  */
+  /* ################################ FOOTER SECTION SIX START ################################  */
+  section .footer {
+    padding: 40px;
+  }
+  /* ################################ FOOTER SECTION SIX END ################################  */
 }

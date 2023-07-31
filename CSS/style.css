@@ -1,3 +1,4 @@
+/* ################################ GLOBAL SECTION START ################################  */
 * {
   margin: 0;
   padding: 0;
@@ -21,11 +22,12 @@ html {
   --contact-black-color: #f5f5f5;
   --selection-color: #bc8f8f;
   --background-image: url(../images/team-shape.svg);
+  --hover-color: #923434;
+  --bachground-side-bar: rgb(255, 255, 255, 0.5);
 }
 a {
   text-decoration: none;
 }
-
 .container {
   width: 80%;
   margin: auto;
@@ -38,67 +40,30 @@ a {
   color: var(--color-black);
   background-color: var(--selection-color);
 }
-.toggleDark,
-.toggleLight {
-  cursor: pointer;
-  position: fixed;
-  z-index: 2;
-  top: 30px;
-  left: 90%;
-  font-size: 1.5rem;
-  z-index: 9;
-}
-#toggleMode {
-  visibility: hidden;
-}
-.toggleDark {
-  display: block;
-}
-.toggleLight {
-  display: none;
-  color: white;
-}
-#toggleMode:checked ~ .toggleDark {
-  display: none;
-}
-#toggleMode:checked ~ .toggleLight {
-  display: block;
-}
 section {
   background-color: var(--background);
 }
-#toggleMode:checked ~ #nav,
-#toggleMode:checked ~ #home,
-#toggleMode:checked ~ #chefs,
-#toggleMode:checked ~ #gallery,
-#toggleMode:checked ~ #contact,
-#toggleMode:checked ~ #footer {
-  --Main-Color: #c17e1f;
-  --background-black: #252525;
-  --primary-Color: #ffffff;
-  --color-black: #171717;
-  --background: #202020;
-  --Defult-Color: #fff;
-  --contact-black-color: #0d0d0d;
-  --selection-color: #c17e1f;
-  --background-image: url(../images/team-shape-dark.svg);
+.main-title {
+  text-align: center;
+  margin: 0 auto 1.5rem;
 }
-/* ################################ NAVBAR SECTION ONE START ################################  */
-
-body:not(:has(:target)) .seactions .centernav .home,
-body:has(.home:target) .seactions .centernav .home,
-body:has(.chefs:target) .seactions .centernav .chefs,
-body:has(.gallery:target) .seactions .centernav .gallery,
-body:has(.contact:target) .seactions .centernav .contact {
+.main-title h2 {
+  font-family: var(--Secondary-Font-Family);
+  color: var(--Secondary-Color);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.main-title p {
+  font-family: var(--Main-Font-Family);
   color: var(--Defult-Color);
+  font-size: 3.5rem;
 }
-body:not(:has(:target)) .seactions .centernav .home::after,
-body:has(.home:target) .seactions .centernav a.home::after,
-body:has(.chefs:target) .seactions .centernav a.chefs::after,
-body:has(.gallery:target) .seactions .centernav a.gallery::after,
-body:has(.contact:target) .seactions .centernav a.contact::after {
-  opacity: 1;
+.main-title p span {
+  color: var(--Main-Color);
 }
+/* ################################ GLOBAL SECTION END ################################  */
+
+/* ################################ NAVBAR SECTION ONE START ################################  */
 nav {
   box-shadow: 0 0 20px #0000001b;
   background-color: var(--color-black);
@@ -108,118 +73,116 @@ nav {
   top: 0;
   z-index: 3;
 }
-.nav-container {
-  padding: 25px 5px;
+nav .container {
+  padding: 20px 5px;
 }
-.container .logo-text {
-  width: 20%;
-}
-.container .logo-text h1 {
-  font-size: 30px;
-}
-.container .logo-text h1 a {
+nav .container .logo-text h1 a {
   font-family: var(--Defult-Font-Family);
   color: var(--Defult-Color);
+  font-size: 30px;
 }
-.container .logo-text h1 a::after {
+nav .container .logo-text h1 a::after {
   content: ".";
   color: var(--Main-Color);
 }
-.container .dark-mode .sidenav {
-  background-color: var(--selection-color);
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 25%;
-  padding: 50px 25px;
+nav .container .nav-links {
   list-style-type: none;
-  text-align: left;
-  display: none;
-}
-.container .dark-mode .sidenav li {
-  padding: 15px 5px;
-}
-.container .dark-mode .sidenav li a {
-  font-size: 1.0625rem;
-  color: var(--Secondary-Color);
-  font-family: var(--Defult-Font-Family);
-  padding: 0.3125rem 0.9375rem;
-  font-weight: 600;
-  position: relative;
-  transition: 0.5s color;
-  background-color: #0d0d0d;
-}
-.container .seactions .centernav {
   display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
-
-.container .seactions .centernav li {
-  text-align: center;
-}
-.container .seactions .centernav li a {
+nav .nav-links li a {
   font-size: 1.0625rem;
   color: var(--Secondary-Color);
   font-family: var(--Defult-Font-Family);
   padding: 0.3125rem 0.9375rem;
   font-weight: 600;
   position: relative;
-  transition: 0.5s color;
+  transition: 0.8s color;
 }
-
-.container .seactions .centernav li a::after {
+nav .nav-links li a:hover {
+  color: var(--Defult-Color);
+}
+nav .nav-links li a::after {
   content: "";
-  width: calc(100% - (0.9375rem * 2));
-  height: 10%;
+  width: 0%;
+  height: 7%;
   position: absolute;
   bottom: -0.3125rem;
   left: 0.9375rem;
   background-color: var(--Main-Color);
-  opacity: 0;
-  transition: 1s all;
+  transition: width 1s;
 }
-@keyframes lineMotion {
-  0% {
-    width: 0;
-    left: 0.9375rem;
-  }
-  100% {
-    width: calc(100% - (0.9375rem * 2));
-    right: 0;
-  }
+nav .nav-links li a:hover::after {
+  width: calc(100% - (0.9375rem * 2));
 }
-.container .seactions .centernav li a:hover {
+body:not(:has(:target)) .home-link,
+body:has(.home:target) .home-link,
+body:has(.chefs:target) .chefs-link,
+body:has(.gallery:target) .gallery-link,
+body:has(.contact:target) .contact-link {
   color: var(--Defult-Color);
 }
-.container .seactions .centernav li a:hover::after {
-  opacity: 1;
-  animation-name: lineMotion;
-  animation-duration: 0.5s;
+
+body:not(:has(:target)) .home-link::after,
+body:has(.home:target) .home-link::after,
+body:has(.chefs:target) .chefs-link::after,
+body:has(.gallery:target) .gallery-link::after,
+body:has(.contact:target) .contact-link::after {
+  width: calc(100% - (0.9375rem * 2));
+}
+nav .container .mode-group label {
+  font-size: 25px;
+  cursor: pointer;
+}
+nav .container .mode-group label.light {
+  display: none;
+  color: var(--Defult-Color);
+}
+:root:has(.mode-group input:checked) {
+  --Main-Color: #c17e1f;
+  --background-black: #252525;
+  --primary-Color: #ffffff;
+  --color-black: #171717;
+  --background: #202020;
+  --Defult-Color: #fff;
+  --contact-black-color: #0d0d0d;
+  --selection-color: #c17e1f;
+  --background-image: url(../images/team-shape-dark.svg);
+  --hover-color: #eeae53;
+  --bachground-side-bar: rgb(13, 13, 13, 0.8);
 }
 
-.container .dark-mode {
-  width: 10%;
-  text-align: right;
+body:has(.mode-group input:checked) .mode-group .dark {
+  display: none;
 }
-.container .dark-mode i {
+body:has(.mode-group input:checked) .mode-group .light {
+  display: block;
+}
+nav .menu-icon {
   cursor: pointer;
   font-size: 1.5625rem;
+  display: none;
   color: var(--Defult-Color);
-  margin-right: 20px;
-  font-weight: 900;
 }
-
+nav ul li.close-icon {
+  display: none;
+}
+nav ul li.close-icon a {
+  font-size: 25px;
+}
 /* ################################ NAVBAR SECTION ONE END ################################  */
+
 /* ################################ HOME SECTION TWO START ################################  */
-.home-background {
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 81.101px;
   background-color: var(--background-black);
-  padding-top: 90px;
 }
 .home-container {
-  padding: 2.5rem 0.3125rem 1.35rem;
+  padding: 2.3rem 0.3125rem;
 }
 .home-container .home-content {
   width: 40%;
@@ -254,7 +217,7 @@ nav {
   transition: all 1s;
 }
 .home-buttons .first-btn button:hover {
-  background-color: var(--Main-Color);
+  background-color: var(--hover-color);
 }
 .home-buttons .first-btn a button {
   color: var(--color-black);
@@ -307,7 +270,7 @@ nav {
   transition: all 1s;
 }
 .home-container .home-Picture {
-  width: 50%;
+  width: 40%;
 }
 .home-container .home-Picture img {
   width: 100%;
@@ -315,15 +278,42 @@ nav {
 }
 @keyframes img-rotate {
   0% {
-    transform: translate(3px, -2px) rotate(2deg);
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
   }
   100% {
-    transform: translate(-3px, 2px) rotate(2deg);
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 .home-container .home-Picture img:hover {
   animation-name: img-rotate;
-  animation-duration: 0.2s;
+  animation-duration: 0.8s;
   animation-iteration-count: infinite;
 }
 
@@ -332,30 +322,10 @@ nav {
   background-color: var(--Main-Color);
 }
 /* ################################ HOME SECTION TWO END ################################  */
+
 /* ################################ CHEFS SECTION THREE START ################################  */
 section .chefs-sections {
-  padding: 0px 5px;
-  width: 80%;
-  margin: auto;
-  padding: 50px 0;
-}
-section .chefs-sections .main-title {
-  text-align: center;
-  margin-bottom: 1.5625rem;
-}
-.chefs-sections .main-title h2 {
-  font-family: var(--Secondary-Font-Family);
-  color: var(--Secondary-Color);
-  font-size: 0.875rem;
-  font-weight: 400;
-}
-.chefs-sections .main-title p {
-  font-family: var(--Main-Font-Family);
-  color: var(--Defult-Color);
-  font-size: 3.5rem;
-}
-.chefs-sections .main-title p span {
-  color: var(--Main-Color);
+  padding: 50px 5px;
 }
 .chefs-sections .chefs-cards {
   display: flex;
@@ -381,7 +351,8 @@ section .chefs-sections .main-title {
   border-radius: 0.3125rem;
   background-color: #ffffff4d;
   padding: 0.625rem;
-  transition: 0.5s 0.5s all;
+  /* Hover off */
+  transition: 0.5s all;
 }
 .chefs-sections .chefs-cards .card .social-icons ul {
   list-style-type: none;
@@ -400,9 +371,10 @@ section .chefs-sections .main-title {
   transform: scale(1.1);
 }
 .chefs-sections .chefs-cards .card:hover .social-icons {
+  /* Hover on */
   transform: translate(-3.5rem);
+  transition: 0.5s 0.5s all;
 }
-
 .chefs .chefs-cards .card .card-img {
   width: 100%;
   text-align: center;
@@ -416,7 +388,9 @@ section .chefs-sections .main-title {
 .chefs .chefs-cards .card .card-img::after {
   content: "";
   height: 60px;
+  width: 100%;
   background-image: var(--background-image);
+  background-repeat: repeat-x;
   position: absolute;
   bottom: -10px;
   right: 0;
@@ -452,34 +426,14 @@ section .chefs-sections .main-title {
 /* ################################ CHEFS SECTION THREE END ################################  */
 
 /* ################################ Gallery SECTION FOUR START ################################  */
-section .gallery-Background {
+section.gallery-Background {
   background-color: var(--background-black);
 }
 section .gallery {
   padding: 2.5rem 0.3125rem;
-  width: 80%;
   margin: auto;
 }
-section .gallery .head-title {
-  text-align: center;
-  margin-bottom: 1.5625rem;
-}
-
-section .gallery .head-title h2 {
-  font-family: var(--Secondary-Font-Family);
-  color: var(--Secondary-Color);
-  font-size: 0.875rem;
-  font-weight: 400;
-}
-section .gallery .head-title p {
-  font-family: var(--Main-Font-Family);
-  color: var(--Defult-Color);
-  font-size: 3.5rem;
-}
-section .gallery .head-title p span {
-  color: var(--Main-Color);
-}
-section .gallery .pictures .child {
+section.gallery-Background .gallery .pictures .child {
   overflow: hidden;
   border: 3px solid white;
   position: relative;
@@ -570,32 +524,11 @@ section .gallery .pictures div img::selection {
   color: white;
   background-color: var(--Main-Color);
 }
-
 /* ################################ Gallery SECTION FOUR END ################################  */
 
 /* ################################ Contact SECTION FIVE START ################################  */
 section .contact-section {
   padding: 2.5rem 0.3125rem;
-  width: 80%;
-  margin: auto;
-}
-section .contact-section .main-title {
-  margin-bottom: 1.5625rem;
-  text-align: center;
-}
-section .contact-section .main-title h2 {
-  font-family: var(--Secondary-Font-Family);
-  color: var(--Secondary-Color);
-  font-size: 0.875rem;
-  font-weight: 400;
-}
-section .contact-section .main-title p {
-  font-family: var(--Main-Font-Family);
-  color: var(--Defult-Color);
-  font-size: 3.5rem;
-}
-section .contact-section .main-title p span {
-  color: var(--Main-Color);
 }
 section .contact-section iframe {
   width: 100%;
@@ -631,7 +564,6 @@ section .contact-section .details .icon-Contact i {
   color: var(--color-black);
   font-size: 1.2rem;
 }
-
 section .contact-section .details .contact-Info h3 {
   color: #7d7d7d;
   font-size: 1.25rem;
@@ -652,6 +584,7 @@ section .contact-section .contact-Form {
   padding: 20px;
   box-shadow: 0 0 1.875rem #00000014;
   background-color: var(--color-black);
+  width: 100%;
 }
 section .contact-section .contact-Form form {
   display: flex;
@@ -666,6 +599,11 @@ section .contact-section .contact-Form form textarea {
   font-family: var(--Defult-Font-Family);
   resize: vertical;
   outline: none;
+  transition: 0.5s all;
+}
+section .contact-section .contact-Form form textarea {
+  max-height: 350px;
+  min-height: 150px;
 }
 section .contact-section .contact-Form form input:focus,
 section .contact-section .contact-Form form textarea:focus {
@@ -700,7 +638,7 @@ section .contact-section .contact-Form form button::selection {
   background-color: var(--Main-Color);
 }
 section .contact-section .contact-Form form button:hover {
-  background-color: var(--Main-Color);
+  background-color: var(--hover-color);
 }
 /* ################################ Contact SECTION FIVE END ################################  */
 
@@ -719,7 +657,6 @@ section .footer {
   gap: 3px;
   flex-wrap: wrap;
 }
-
 section .footer .Part_One {
   width: 24%;
 }
@@ -804,10 +741,9 @@ section .footer .Part_Two form input {
   border: 2px solid #767676;
   border-radius: 2px;
   outline: none;
-  width: 79%;
+  flex-grow: 1;
 }
 section .footer .Part_Two form button {
-  width: 20%;
   padding: 10px;
   cursor: pointer;
   background-color: var(--Main-Color);
@@ -818,7 +754,7 @@ section .footer .Part_Two form button {
   transition: 0.5s all;
 }
 section .footer .Part_Two form button:hover {
-  background-color: var(--Main-Color);
+  background-color: var(--hover-color);
 }
 section .footer .Part_Two ul {
   margin-top: 10px;
@@ -881,16 +817,5 @@ section .footer .Part_Three ul li a {
   color: white;
   font-family: var(--Defult-Font-Family);
   font-size: 1rem;
-}
-section .footer p::selection,
-section .footer h3::selection,
-section .footer h2::selection,
-section .footer a::selection,
-section .footer li::selection,
-section .footer input::selection,
-section .footer button::selection,
-section .footer img::selection {
-  color: white;
-  background-color: var(--Main-Color);
 }
 /* ################################ FOOTER SECTION SIX END ################################  */

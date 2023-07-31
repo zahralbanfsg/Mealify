@@ -17,32 +17,40 @@
 </head>
 
 <body id="dark">
-    <input type="checkbox" id="toggleMode">
-    <label class="toggleDark" for="toggleMode"><i class="fa-solid fa-moon"></i></label>
-    <label class="toggleLight" for="toggleMode"><i class="fa-regular fa-moon"></i></label>
     <!-- ################################ NAVBAR SECTION ONE START ################################ -->
-    <nav id="nav">
-        <div class="nav-container container">
+    <nav>
+        <div class="container">
             <div class="logo-text">
                 <h1><a href="/index.html">Mealify</a></h1>
             </div>
-            <div class="seactions">
-                <ul class="centernav">
-                    <li><a href="#home" class="home">Home</a></li>
-                    <li><a href="#chefs" class="chefs">Chefs</a></li>
-                    <li><a href="#gallery" class="gallery">Gallery</a></li>
-                    <li><a href="#contact" class="contact">Contact</a></li>
-                </ul>
+            <ul class="nav-links" id="navLinks">
+                <li class="close-icon">
+                    <a href="#home">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#home" class="home-link">Home</a>
+                </li>
+                <li>
+                    <a href="#chefs" class="chefs-link">Chefs</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="gallery-link">Gallery</a>
+                </li>
+                <li>
+                    <a href="#contact" class="contact-link">Contact</a>
+                </li>
+            </ul>
+            <div class="mode-group">
+                <label for="mode" class="dark">
+                    <i class="fa-solid fa-moon"></i>
+                </label>
+                <label for="mode" class="light">
+                    <i class="fa-regular fa-moon"></i></label>
+                <input type="checkbox" id="mode" class="mode" hidden aria-hidden />
             </div>
-            <div class="dark-mode">
-                <i class="fa-solid fa-bars fa-lg side-bar"></i>
-                <ul id="sidenav" class="sidenav">
-                    <li><a href="#home" class="home">Home</a></li>
-                    <li><a href="#chefs" class="chefs">Chefs</a></li>
-                    <li><a href="#gallery" class="gallery">Gallery</a></li>
-                    <li><a href="#contact" class="contact">Contact</a></li>
-                </ul>
-            </div>
+            <a href="#navLinks" class="menu-icon"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
     <!-- ################################ NAVBAR SECTION ONE END ################################  -->
@@ -86,8 +94,8 @@
 
 
     <!-- ################################ CHEFS SECTION THREE START ################################  -->
-    <section class="chefs" id="chefs">
-        <div class="chefs-sections">
+    <section class="chefs " id="chefs">
+        <div class="chefs-sections container">
             <div class="main-title">
                 <h2>CHEFS</h2>
                 <p>Our <span>Proffesional</span> Chefs </p>
@@ -178,57 +186,55 @@
 
 
     <!-- ################################ Gallery SECTION FOUR START ################################  -->
-    <section class="gallery" id="gallery">
-        <div class="gallery-Background">
-            <div class="gallery" id="Gallery">
-                <div class="head-title">
-                    <h2>GALLERY</h2>
-                    <p>Check <span>Our Gallery</span></p>
+    <section class="gallery-Background" id="gallery">
+        <div class="gallery container" id="Gallery">
+            <div class="main-title">
+                <h2>GALLERY</h2>
+                <p>Check <span>Our Gallery</span></p>
+            </div>
+            <div class="pictures">
+                <div class="meal1 child">
+                    <img src="./images/meal-1.jpg" alt="meal-1">
+                    <div class="layer">
+                        <h2>Pizza</h2>
+                        <p>Hawaiian pizza with ham and pineapple</p>
+                    </div>
                 </div>
-                <div class="pictures">
-                    <div class="meal1 child">
-                        <img src="./images/meal-1.jpg" alt="meal-1">
-                        <div class="layer">
-                            <h2>Pizza</h2>
-                            <p>Hawaiian pizza with ham and pineapple</p>
-                        </div>
+                <div class="meal3 child"><img src="./images/meal-3.jpg" alt="meal-3">
+                    <div class="layer">
+                        <h2>Burger</h2>
+                        <p>Grass fed bison hamburger with chips & beer</p>
                     </div>
-                    <div class="meal3 child"><img src="./images/meal-3.jpg" alt="meal-3">
-                        <div class="layer">
-                            <h2>Burger</h2>
-                            <p>Grass fed bison hamburger with chips & beer</p>
-                        </div>
+                </div>
+                <div class="meal4 child"><img src="./images/meal-5.jpg" alt="meal-4">
+                    <div class="layer">
+                        <h2>Crispy Fried Chicken</h2>
+                        <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
                     </div>
-                    <div class="meal4 child"><img src="./images/meal-5.jpg" alt="meal-4">
-                        <div class="layer">
-                            <h2>Crispy Fried Chicken</h2>
-                            <p>Golden brown chicken legs with a crunchy coating and juicy meat</p>
-                        </div>
+                </div>
+                <div class="meal2 child"><img src="./images/meal-2.jpg" alt="meal-2">
+                    <div class="layer">
+                        <h2>Beef steaks</h2>
+                        <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
                     </div>
-                    <div class="meal2 child"><img src="./images/meal-2.jpg" alt="meal-2">
-                        <div class="layer">
-                            <h2>Beef steaks</h2>
-                            <p>Tasty beef steaks flying above cast iron grate with fire flames.</p>
-                        </div>
+                </div>
+                <div class="meal7 child"><img src="./images/meal-7.jpg" alt="meal-7">
+                    <div class="layer">
+                        <h2>Frittata</h2>
+                        <p>Frittata or potato pie in a ceramic plate</p>
                     </div>
-                    <div class="meal7 child"><img src="./images/meal-7.jpg" alt="meal-7">
-                        <div class="layer">
-                            <h2>Frittata</h2>
-                            <p>Frittata or potato pie in a ceramic plate</p>
-                        </div>
+                </div>
+                <div class="meal6 child"><img src="./images/meal-6.jpg" alt="meal-6">
+                    <div class="layer">
+                        <h2>Lyulya kebab</h2>
+                        <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and herbs
+                        </p>
                     </div>
-                    <div class="meal6 child"><img src="./images/meal-6.jpg" alt="meal-6">
-                        <div class="layer">
-                            <h2>Lyulya kebab</h2>
-                            <p>Tender and juicy skewers of ground lamb or beef, flavored with aromatic spices and herbs
-                            </p>
-                        </div>
-                    </div>
-                    <div class="meal5 child"><img src="./images/meal-4.jpg" alt="meal-5">
-                        <div class="layer">
-                            <h2>Levitation pizza</h2>
-                            <p>Levitation pizza on black background.</p>
-                        </div>
+                </div>
+                <div class="meal5 child"><img src="./images/meal-4.jpg" alt="meal-5">
+                    <div class="layer">
+                        <h2>Levitation pizza</h2>
+                        <p>Levitation pizza on black background.</p>
                     </div>
                 </div>
             </div>
@@ -237,8 +243,8 @@
     <!-- ################################ Gallery SECTION FOUR END ################################  -->
 
     <!-- ################################ Contact SECTION FIVE START ################################  -->
-    <section class="contact" id="contact">
-        <div class="contact-section">
+    <section class="contact " id="contact">
+        <div class="contact-section container">
             <div class="main-title">
                 <h2>CONTACT</h2>
                 <p>Need Help ? <span>Contact Us</span></p>
@@ -246,7 +252,8 @@
             <iframe
                 src="
                 https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.445785295115!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1681863129691!5m2!1sen!2sus"
-                style="border: 0" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+                style="border: 0" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
             <div class="details">
                 <div class="item">
                     <div class="icon-Contact">
